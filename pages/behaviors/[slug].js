@@ -42,7 +42,7 @@ export default function Behavior() {
     if (!router.isReady) return;
     const { slug } = router.query;
     axios
-      .get(`http://localhost:5050/behaviors/${slug}`, {
+      .get(`https://ambiguous-fantastic-andesaurus.glitch.me/behaviors/${slug}`, {
         headers: {
           Authorization: `Bearer ${auth_token}`,
         },
@@ -61,7 +61,7 @@ export default function Behavior() {
     const newTasks = tasks.filter((task) => {
       if (task.id === id) {
         axios
-          .delete(`http://localhost:5050/tasks/${task.id}`, {
+          .delete(`https://ambiguous-fantastic-andesaurus.glitch.me/tasks/${task.id}`, {
             headers: {
               Authorization: `Bearer ${user.accessToken}`,
             },
@@ -95,7 +95,7 @@ export default function Behavior() {
         task.name = body;
         task.behavior = data.id;
         axios
-          .put(`http://localhost:5050/tasks/${task.id}`, task, {
+          .put(`https://ambiguous-fantastic-andesaurus.glitch.me/tasks/${task.id}`, task, {
             headers: {
               Authorization: `Bearer ${user.accessToken}`,
             },
@@ -116,7 +116,7 @@ export default function Behavior() {
     console.log(task);
     task.behavior = data.id;
     axios
-      .post(`http://localhost:5050/tasks/create`, task, {
+      .post(`https://ambiguous-fantastic-andesaurus.glitch.me/tasks/create`, task, {
         headers: {
           Authorization: `Bearer ${user.accessToken}`,
         },

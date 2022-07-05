@@ -32,7 +32,7 @@ export default function LoginPage(props) {
     // send the username and password to the server
 
     try {
-      const res = await axios.post("http://localhost:5050/auth/login", user);
+      const res = await axios.post("https://ambiguous-fantastic-andesaurus.glitch.me/auth/login", user);
       console.log(res.data);
       localStorage.setItem("user", JSON.stringify(res.data));
       Router.push("/");

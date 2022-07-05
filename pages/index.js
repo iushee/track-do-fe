@@ -24,7 +24,7 @@ export default function Home() {
     }
     setLoading(true);
     axios
-      .get("http://localhost:5050/behaviors", {
+      .get("https://ambiguous-fantastic-andesaurus.glitch.me/behaviors", {
         headers: {
           Authorization: `Bearer ${auth_token}`,
         },

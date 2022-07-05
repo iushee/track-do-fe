@@ -40,7 +40,7 @@ export default function SignupPage() {
     // send the username and password to the server
 
     try {
-      const res = await axios.post("http://localhost:5050/auth/register", user);
+      const res = await axios.post("https://ambiguous-fantastic-andesaurus.glitch.me/auth/register", user);
       if (res.data.success == true) {
         Router.push("/");
       } else {
